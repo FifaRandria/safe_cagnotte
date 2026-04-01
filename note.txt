@@ -7,7 +7,7 @@ SUPABASE :
         - stockage de fichier
         - temp reel (chat, notification)
 
-PRISMA : 
+PRISMA (shema.prisma, .env, prisma.config.ts) : 
     Un outil pour parler a la base de donnees facilement.
 
     Sans sql, au lieu de faire :
@@ -18,3 +18,28 @@ PRISMA :
     Donc prisma : Simplifie les requetes a la base.
 
     const user = await prisma.user.findMany();
+
+    npm install prisma @prisma/client
+    npx prisma init
+    npx prisma migrate dev --name init
+    npx prisma generate
+
+
+COOKIE : 
+    Un petit fichier de donnees que le site envoie avec JWT aux navigateur, et le navigateur
+    le stocke puis le renvoie au serveur a chaque nouvelle requete vers le site
+    Donc cela sert a :
+        - garder la session ouverte
+        - Suivre ton activite
+
+JWT (Json Web Token):
+    Une chaine de texte en trois parties separees par des points: {header.playload.signature}
+    La partie playload contient nos donnees en clair, et signature est generer avec AUTH_SECRET, difficile a 
+    falsifier.
+
+NEXTAuth.js : 
+    Une bibliotheque qui gere tout ce qui est connexion/deconexion/session....c'est ce 
+    dernier qui fournis le cookie+JWT pour qu'on puisse sauvegarder notre session
+
+    npm install next-auth@beta @auth/prisma-adapter bcryptjs
+    npm install --save-dev @types/bcryptjs

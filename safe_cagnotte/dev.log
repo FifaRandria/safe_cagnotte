@@ -1,0 +1,18 @@
+
+> safe_cagnotte@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.28.192.1:3000
+- Environments: .env
+✓ Ready in 1058ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3002
+- PID:          15176
+- Dir:          E:\codecode\safe_cagnotte\fullstack\safe_cagnotte
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 15176 /F to stop it.
+[?25h
